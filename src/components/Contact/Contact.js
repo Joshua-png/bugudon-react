@@ -3,6 +3,9 @@ import Carousels from '../Carousel/Carousels';
 import SectionTitle from '../Home/SectionTitle';
 import {ContactData} from './ContactData';
 import ContactCards from './ContactCards';
+import Map from './Map';
+import ContactForm from './ContactForm';
+
 
 export default function Contact(){
     return(
@@ -37,8 +40,14 @@ export default function Contact(){
                   )
                 })
               }
-          </div>  
+          </div> 
+          <div class="row mb-3">
+            <Map />
+            <ContactForm />
+          </div> 
        </div>
+
+       
       </React.Fragment> 
     )
 }
