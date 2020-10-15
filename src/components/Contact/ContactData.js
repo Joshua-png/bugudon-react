@@ -1,8 +1,9 @@
 import React from 'react';
+import {faEnvelope, faPhone, faMap } from '@fortawesome/free-solid-svg-icons';
 
 export const ContactData = [
     {
-        classes:"bx bx-map",
+        classes: faMap,
         title:"Location",
         info:<React.Fragment>
               H/No. C684, <br />
@@ -11,7 +12,7 @@ export const ContactData = [
         </React.Fragment>
     },
     {
-        classes:"bx bx-envelope",
+        classes:faEnvelope,
         title:"Postal Address",
         info:<React.Fragment>
               <p> Post Office Box GP 4107<br />
@@ -19,7 +20,7 @@ export const ContactData = [
         </React.Fragment>
     },
     {
-        classes:"bx bx-envelope",
+        classes:faEnvelope,
         title:"Email Us",
         info:<React.Fragment>
               <p>enquiries@bugudon.com<br />
@@ -29,7 +30,7 @@ export const ContactData = [
         </React.Fragment>
     },
     {
-        classes:"bx bx-phone-call",
+        classes:faPhone,
         title:"Call Us",
         info:<React.Fragment>
               <p>+233 208153899</p>
