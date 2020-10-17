@@ -12,7 +12,7 @@ export default function Footer(){
             <h4>Links</h4>
             <ul>
               <li> <Link to="/projects">Projects</Link></li>
-              <li> <Link to="#investors-off-takers">Investors & Off takers</Link></li>
+              <li> <Link to="/investorsection">Investors & Off takers</Link></li>
               <li> <Link to="/company">Company</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/privacy">Privacy policy</Link></li>

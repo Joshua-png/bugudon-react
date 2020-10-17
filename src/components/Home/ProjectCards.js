@@ -1,4 +1,6 @@
 import React from 'react';
+import ReadMoreAndLess from 'react-read-more-less';
+
 
 export default function ProjectCards(){
     return(
@@ -15,11 +17,17 @@ export default function ProjectCards(){
               concession shows a gold purity of 92% or 22 karats in its natural state.
               Also found in association with the alluvial gold is economic quantities
               of ilmenite (FeTiO3), a source of ore used in the production of titanium (Ti).</p>
-            <p id="js1" style={{display:'none'}} className="shadow p-2 pro-body-content text-justify bg-warning">The above clearly signifies, Bugudon Limited associated project concept
-              is in line with the firm’s mission of progressively harnessing best
-              philosophies, practices, tools, partnerships, and resources to grow the
-              company’s mining and process capability.</p>
-            <p><button type="button" className="text-white btn btn-dark font-weight-bold" name="button" onclick="showElement1()">READ MORE</button></p>
+              <ReadMoreAndLess
+                  charLimit={0}
+                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE </button></React.Fragment> }
+                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
+               >
+                  {`The above clearly signifies, Bugudon Limited associated project concept
+                    is in line with the firm’s mission of progressively harnessing best
+                    philosophies, practices, tools, partnerships, and resources to grow the
+                    company’s mining and process capability.`
+                  }
+              </ReadMoreAndLess>
           </div>
         </div>
         </div>
@@ -35,11 +43,18 @@ export default function ProjectCards(){
               purity of 92% or 22 karats in its natural state. Also found in association with
               the alluvial gold is economic quantities of ilmenite (FeTiO3), a source of ore
               used in the production of titanium (Ti).
-            <p id="js2" style={{display:'none'}} className="shadow p-2 pro-body-content text-justify bg-warning">The above clearly signifies, Bugudon Limited associated project concept
-              is in line with the firm’s mission of progressively harnessing best
-              philosophies, practices, tools, partnerships, and resources to grow the
-              company’s mining and process capability.</p>
-            <button type="button" className="text-white btn btn-dark font-weight-bold" name="button" onclick="showElement2()">READ MORE</button></p>
+              <ReadMoreAndLess
+                  charLimit={0}
+                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE</button></React.Fragment> }
+                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
+               >
+                  {`The above clearly signifies, Bugudon Limited associated project concept
+                    is in line with the firm’s mission of progressively harnessing best
+                    philosophies, practices, tools, partnerships, and resources to grow the
+                    company’s mining and process capability.`
+                  }
+              </ReadMoreAndLess>
+           </p>
           </div>
         </div>
         </div>
@@ -57,11 +72,18 @@ export default function ProjectCards(){
                 a potential investor to undertake the detailed exploration of the alluvial deposits
                 as well as the hard rock potential. We are open to loan investment finances on
                 explorations joint partners
-              <p id="js3" className="shadow p-2 pro-body-content text-justify bg-warning" style={{display:'none'}}>The above clearly signifies, Bugudon Limited associated project concept
-                is in line with the firm’s mission of progressively harnessing best
-                philosophies, practices, tools, partnerships, and resources to grow the
-                company’s mining and process capability.</p>
-              <button type="button" className="text-white btn btn-dark font-weight-bold" name="button" onclick="showElement3()" id="button">READ MORE</button></p>
+                <ReadMoreAndLess
+                  charLimit={0}
+                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE</button></React.Fragment> }
+                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
+               >
+                  {`The above clearly signifies, Bugudon Limited associated project concept
+                    is in line with the firm’s mission of progressively harnessing best
+                    philosophies, practices, tools, partnerships, and resources to grow the
+                    company’s mining and process capability.`
+                  }
+              </ReadMoreAndLess>
+             </p>
           </div>
         </div>
         </div>
