@@ -9,8 +9,8 @@ export default function Leadership(){
            <div className="pt-3">  
              <SectionTitle title="LEADERSHIP"/>
            </div>
-           <div class="container">
-             <div class="row">
+           <div className="container">
+             <div className="row">
                  {
                     LeadersData.map(({name,img_src,description})=>{
                         return(

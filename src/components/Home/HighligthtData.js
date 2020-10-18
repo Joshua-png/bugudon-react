@@ -28,7 +28,7 @@ export const highlightData = [
             borderTopLeftRadius: 100,
             borderBottomLeftRadius: 100,
         },
-        heading : 'Bugudon Company Limited',
+        heading : 'Bugudon Company',
         paragraph : <React.Fragment>Concession size: 8.44 Km <sup>2</sup><br /> Estimated alluvial ore reserves: 5,700,000m <sup>3</sup> Estimated average grade: 0.5g/m <sup>3</sup><br /> Estimated gold reserves: 91,639 Ounces</React.Fragment>,
         color: '#ff7315',
         data_aos:"fade-up"

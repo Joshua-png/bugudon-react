@@ -26,13 +26,13 @@ export default function BenefitCards(){
 
               <div className="card-body pl-2 pr-2 pt-0">
                 <h5 className="card-title text-center font-weight-bold mb-0">Host Community</h5>
-                <p className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0 ">
+                <div className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0 ">
                   <li>The creation of wealth within the local host community in terms of direct and indirect jobs;</li>
                   <li>Development of social amenities and infrastructure by Government, NGO’s,
                     and private entities due to increased economic activities in the area;</li>
                   <li>Proper management of the environmental issues associated with
                     mining under the supervision of the EPA.</li>
-                </ol></p>
+                </ol></div>
               </div>
             </div>
           </div>
@@ -41,11 +41,11 @@ export default function BenefitCards(){
               <img className="card-img-top" src="static/img/ghana.png" alt="Card cap" style={{height:200}} />
               <div className="card-body pl-2 pr-2 pt-0">
                 <h5 className="card-title text-center font-weight-bold mb-0">Host Government</h5>
-                <p className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0 ">
+                <div className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0 ">
                   <li>Increase government revenues from the area via applicable taxes, royalties, and levies;</li>
                   <li>Increase foreign direct investment into Ghana;</li>
                   <li>Increase foreign exchange reserves to support the local currency.</li>
-                </ol></p>
+                </ol></div>
               </div>
             </div>
           </div>
@@ -70,10 +70,10 @@ export default function BenefitCards(){
                 </ Carousel>
               <div className="card-body pl-2 pr-2 pt-0">
                 <h5 className="card-title pt-0 text-center font-weight-bold mb-0">Internal Stakeholders</h5>
-                <p className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0">
+                <div className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0">
                   <li>The generation returns for the proponents of the company;</li>
                   <li>The generation of work for both employee and vendor of the proposed project.</li>
-                </ol></p>
+                </ol></div>
               </div>
             </div>
           </div>

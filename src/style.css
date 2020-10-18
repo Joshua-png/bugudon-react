@@ -221,6 +221,17 @@ nav{
   max-height: 50px;
 }
 
+@media (max-width:420px) {
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -232,18 +243,32 @@ nav{
 
 .logo-img{
   /* width:150%; */
-  width: 100%;
+  width: 80%;
 }
 
-@media (max-width:420px) {
+@media (max-width:900px) {
     .logo-img{
-      width:100px;
+      width: 80%;
+     
+    
     }
 
+    .logo-sub-text{
+      text-align: center;
+      padding: 5px;
+    }
+
+    
     .media-label{
+      text-align: center;
       padding-top:0;
       margin-bottom: 0;
+      background-color: orange;
     }
+
+    /* .logo-info{
+      margin-top: 50px;
+    } */
 }
 
 
@@ -478,8 +503,27 @@ nav{
 }
 
 @media (max-width:900px){
-  .img-hidden{
+    .img-hidden{
+      height: 190px;
+      padding-top:40px;
+      
+  }
+  
+  .img-3{
+    height: 300px;
+  }
+
+  .change{
     height: 200px;
+  }
+
+  .phone-size{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .p-investor{
+    padding-top: 50px;
   }
 
   .carousel-control-prev{
@@ -514,6 +558,7 @@ nav{
 @media (max-width:420px){
   .intro-text{
     font-size: 15px;
+    font-family: 'Tangerine', serif;
   }
 }
 
@@ -529,6 +574,12 @@ nav{
 
 .vision-heading-col h6{
   font-weight:bold;
+}
+
+@media (max-width:900px){
+  .vision-heading-col h6{
+    font-weight:lighter;
+  }
 }
 
 .cursive-heading h6{
@@ -564,10 +615,21 @@ nav{
     padding-right: 0;
   }
 
+  @media (min-width:900px){
+    .p-investor{
+      padding-top: 100px !important;
+    }
+  }
+
   @media (max-width:900px){
     .zero-pr{
       padding-left: 0;
     }
+
+    .p-investor{
+      padding-top: 50px !important;
+    }
+   
   }
 
 /* projects heading */
@@ -639,9 +701,17 @@ nav{
 
 /* contact page */
 .img-hidden-contact{
-  height:21.875rem;
+  height:23.875rem;
   overflow:hidden;
-  padding-top:35px;
+  padding-top:75px;
+}
+
+@media (max-width: 900px){
+  .img-hidden-contact{
+    height:200px;
+    overflow:auto;
+    padding-top:40px;
+  }
 }
 
 /* end */

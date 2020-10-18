@@ -15,25 +15,24 @@ export const ContactData = [
         classes:faEnvelope,
         title:"Postal Address",
         info:<React.Fragment>
-              <p> Post Office Box GP 4107<br />
-              Accra, Ghana</p>
+              Post Office Box GP 4107<br />
+              Accra, Ghana
         </React.Fragment>
     },
     {
         classes:faEnvelope,
         title:"Email Us",
         info:<React.Fragment>
-              <p>enquiries@bugudon.com<br />
+              enquiries@bugudon.com<br />
                 Togbe@bugudon.com<br />
                 yehodamines@yahoo.com
-               </p>
         </React.Fragment>
     },
     {
         classes:faPhone,
         title:"Call Us",
         info:<React.Fragment>
-              <p>+233 208153899</p>
+              +233 208153899
         </React.Fragment>
     }
 ]
