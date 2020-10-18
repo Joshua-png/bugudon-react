@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function NavBar(){
     return(
         <header id="nav1" style={{height:40}}>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light p-0 nav-menu ">
+            <nav className="navbar navbar-expand-lg navbar-light bg-white p-0 nav-menu shadow">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

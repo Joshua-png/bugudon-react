@@ -1,5 +1,5 @@
 body {
-  font-family: 'Garamond' !important;
+  font-family: 'Cormorant Garamond', serif !important;
   color: #121213;
   line-height: 1.1;
 }
@@ -294,7 +294,7 @@ nav{
   transition: 0.3s;
   font-size: 18px;
   font-weight: 500px;
-  font-family: "Garamond";
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -583,7 +583,8 @@ nav{
 }
 
 .cursive-heading h6{
-  font-family:'Monotype Corsiva';
+  /* font-family:'Monotype Corsiva'; */
+  font-family: 'Lobster', cursive;
   animation: color-change 20s infinite;
   animation-delay: 5s;
   /* animation-name: cursive;
@@ -997,7 +998,7 @@ section {
   /* margin-bottom: 15px; */
   padding-bottom: 5px;
   position: relative;
-  font-family: 'Garamond';
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .section-title h2::after {
@@ -2737,7 +2738,7 @@ section {
 }
 
 footer{
-  font-family: 'Garamond';
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .pushed-down{
