@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 import Carousel from 'react-bootstrap/Carousel';
 
+import ReactMarkdown from 'react-markdown'
+import postlist from '../../contentJSON/pages.json'
 
-export default function BenefitCards(){
+
+
+export default function BenefitCards() {
+  /* 
+  fetch(test).then((response) => response.text()).then((text) => {
+    console.log(text.title);
+    setMd(text);
+
+  })
+   */
+  console.log(postlist);  
     return(
         <div className="row mt-2 mb-3">
           <div className="col-md-4 pl-0 pr-0">
@@ -26,13 +39,12 @@ export default function BenefitCards(){
 
               <div className="card-body pl-2 pr-2 pt-0">
                 <h5 className="card-title text-center font-weight-bold mb-0">Host Community</h5>
-                <p className="card-text mb-0"><ol className="pl-3 text-justify list-div pt-0 ">
-                  <li>The creation of wealth within the local host community in terms of direct and indirect jobs;</li>
-                  <li>Development of social amenities and infrastructure by Government, NGO’s,
-                    and private entities due to increased economic activities in the area;</li>
-                  <li>Proper management of the environmental issues associated with
-                    mining under the supervision of the EPA.</li>
-                </ol></p>
+              <p className="card-text mb-0">
+                <div className="pl-3 text-justify list-div pt-0 ">                
+                  <ReactMarkdown Heading={true} source={postlist[0].content} />
+                  </div>
+                </p>
+                
               </div>
             </div>
           </div>
