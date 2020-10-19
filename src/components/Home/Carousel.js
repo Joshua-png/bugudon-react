@@ -21,20 +21,20 @@ export default function Carousels(){
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                    className="d-block w-100"
+                    className="d-block w-100 img-3"
                     src="static/img/dominik-vanyi-Mk2ls9UBO2E-unsplashsmaller.jpg"
                     alt="Third slide"
                     />
                 </Carousel.Item>
                 </Carousel>
 
-                <div className="row ml-0 mr-0">
-                <div className="col-md-2 text-white p-2 text-center vision-heading-col">
-                    <h6 className="intro-text">Our Vision</h6>
-                </div>
-                <div className="col-md-10 bg-warning p-2 text-center cursive-heading ">
-                    <h6 className="intro-text">To build a world-className listed mining firm with a chain of large-scale mines across Ghana and West Africa.</h6>
-                </div>
+                <div className="row ml-0 mr-0 logo-info">
+                    <div className="col-md-2 text-white p-2 text-center vision-heading-col">
+                        <h6 className="intro-text">Our Vision</h6>
+                    </div>
+                    <div className="col-md-10 bg-warning p-2 text-center cursive-heading ">
+                        <h6 className="intro-text">To build a world-className listed mining firm with a chain of large-scale mines across Ghana and West Africa.</h6>
+                    </div>
                 </div>
 
             </section>

@@ -25,16 +25,16 @@ export default function InvestorBody(){
                 of at least one of the minerals listed below on its project by first
                 (1st) quarter 2022.</p>
 
-            <p className="line-style mb-0">Projected mineral products are:
+            <div className="line-style mb-0">Projected mineral products are:
             <ol className="mb-0" style={{lineHeight: 1.5}}>
             <li>Gold bars;</li>
             <li>Ilmenite.</li>
             </ol>
 
-            <p style={{lineHeight: 1.5}} className="mb-0">The company is seeking potential off-taker arrangements from reputable
-                entities that will ensure ready demand for all minerals to be produced.</p>
+            <div style={{lineHeight: 1.5}} className="mb-0">The company is seeking potential off-taker arrangements from reputable
+                entities that will ensure ready demand for all minerals to be produced.</div>
 
-                Interest entities can send emails to offtakers@bugudon.com</p>
+                Interest entities can send emails to offtakers@bugudon.com</div>
         </div>
         <div className="col-md-6 h-100">
             <img src="static/img/Hnet-image (4).gif" className="shadow img-fluid rounded" alt="investors" style={{height: '85%',width: '100%'}} />

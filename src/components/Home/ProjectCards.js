@@ -5,7 +5,7 @@ import ReadMoreAndLess from 'react-read-more-less';
 export default function ProjectCards(){
     return(
         <div className="row pt-2 pb-3">
-        <div className="col-md-4 pl-0 pr-0">
+        <div className="col-md-4">
           <div className="shadow card bg-white mb-3 border-0 h-100" data-aos="fade-up">
           <div className="card-header text-center text-white" style={{backgroundColor:'black'}}>Bugudon Gold Mine - Awaham Project</div>
           <div className="card-body zero-pt-pb pr-2 pl-2">
@@ -19,8 +19,8 @@ export default function ProjectCards(){
               of ilmenite (FeTiO3), a source of ore used in the production of titanium (Ti).</p>
               <ReadMoreAndLess
                   charLimit={0}
-                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE </button></React.Fragment> }
-                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
+                  readMoreText={"READ MORE" }
+                  readLessText={"READ LESS" }
                >
                   {`The above clearly signifies, Bugudon Limited associated project concept
                     is in line with the firm’s mission of progressively harnessing best
@@ -43,18 +43,18 @@ export default function ProjectCards(){
               purity of 92% or 22 karats in its natural state. Also found in association with
               the alluvial gold is economic quantities of ilmenite (FeTiO3), a source of ore
               used in the production of titanium (Ti).
-              <ReadMoreAndLess
+           </p>
+           <ReadMoreAndLess
                   charLimit={0}
-                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE</button></React.Fragment> }
-                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
-               >
+                  readMoreText={"READ MORE"}
+                  readLessText={"READ LESS" }
+            >
                   {`The above clearly signifies, Bugudon Limited associated project concept
                     is in line with the firm’s mission of progressively harnessing best
                     philosophies, practices, tools, partnerships, and resources to grow the
                     company’s mining and process capability.`
                   }
-              </ReadMoreAndLess>
-           </p>
+            </ReadMoreAndLess>
           </div>
         </div>
         </div>
@@ -72,10 +72,11 @@ export default function ProjectCards(){
                 a potential investor to undertake the detailed exploration of the alluvial deposits
                 as well as the hard rock potential. We are open to loan investment finances on
                 explorations joint partners
-                <ReadMoreAndLess
+             </p>
+             <ReadMoreAndLess
                   charLimit={0}
-                  readMoreText={<React.Fragment><button className="text-white btn btn-dark font-weight-bold mt-2 ml-2"> READ MORE</button></React.Fragment> }
-                  readLessText={<React.Fragment><br /><button className="text-white btn btn-dark font-weight-bold"> READ LESS </button></React.Fragment> }
+                  readMoreText={"READ MORE"}
+                  readLessText={"READ LESS" }
                >
                   {`The above clearly signifies, Bugudon Limited associated project concept
                     is in line with the firm’s mission of progressively harnessing best
@@ -83,7 +84,6 @@ export default function ProjectCards(){
                     company’s mining and process capability.`
                   }
               </ReadMoreAndLess>
-             </p>
           </div>
         </div>
         </div>
