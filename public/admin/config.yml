@@ -24,7 +24,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string", default: "images"}
-      - {label: "Image One", name: "image1", widget: "image"}
-      - {label: "Image Two", name: "image2", widget: "image"}
-      - {label: "Image Three", name: "image3", widget: "image"}
+      - {label: "Image One", name: "image1", widget: "image", default: "ghana.png"}
+      - {label: "Image Two", name: "image2", widget: "image", default: "ghana.png"}
+      - {label: "Image Three", name: "image3", widget: "image", default: "ghana.png"}
       - {label: "Vision under images", name: "vision", widget: "string"}
