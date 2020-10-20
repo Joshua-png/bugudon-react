@@ -155,7 +155,7 @@ const getSectionAsObject = async( mdContentFile, jsonFileName) => {
             let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
             //Split based on the pair: value in the metadata, and assign the objects
             metadata.forEach((line, i) => {
-                //remove line breaks and carriage returns
+                //remove line breaks and carriage returns()\r)
                 line = line.replace(/(\r\n|\n|\r)/gm, "")  
                 //check if line is valid metadata
                 if (i > 0 && !(/(\w+?:[ ])/.test(line))) {
