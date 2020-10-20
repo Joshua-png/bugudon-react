@@ -27,6 +27,7 @@ const getPosts = async (jsonFileName, mdContent) => {
         
         //files are returned as an array, loop throught them
         files.forEach((file, i) => {
+            
             let obj = {}
             let post;
             //read contents of each file
@@ -74,12 +75,15 @@ const getPosts = async (jsonFileName, mdContent) => {
                     date: metadata.date ? metadata.date : 'No date',
                     content: content ? content : 'No content',
                 }
+                
                 //add the post object to the postlist array
                 postList.push(post);
                 //convert the array to json and store in a json file
                 if (i === files.length - 1) {
                     let data = JSON.stringify(postList)
-                    fs.writeFileSync('src/contentJSON/'+ jsonFileName? jsonFileName:'error.json', data)
+                    const path = 'src/contentJSON/' + (jsonFileName ? jsonFileName : 'error.json')
+                    console.log(postList);
+                    fs.writeFileSync(path, data)
                 }
             })
         })
@@ -103,6 +107,7 @@ const getPages = async () => {
             //read contents of each file
             fs.readFile(`${dirPathPages}/${file}`, 'utf8', (err, contents) => {
                 //place contents in an object with property content todo: make it unique
+                
                 page = {
                     content: contents
                 }
@@ -119,5 +124,5 @@ const getPages = async () => {
 
 }
 
-getPosts('posts.json');
+getPosts('posts.json', "../src/content");
 getPages();

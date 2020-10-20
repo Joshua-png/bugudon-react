@@ -1,5 +1,5 @@
 ---
-title: Post one(1)
+title: Post one1 and more
 author: RD
 date: 31/3/2020
 thumbnail: /static/img/contact_1.png
