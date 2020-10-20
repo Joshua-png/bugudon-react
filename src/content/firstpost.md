@@ -1,5 +1,5 @@
 ---
-title: Post one1 and more
+title: "Post one1 and "
 author: RD
 date: 31/3/2020
 thumbnail: /static/img/contact_1.png
