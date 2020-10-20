@@ -28,4 +28,3 @@ collections:
       - {label: "Image Two", name: "image2", widget: "image"}
       - {label: "Image Three", name: "image3", widget: "image"}
       - {label: "Vision under images", name: "vision", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
