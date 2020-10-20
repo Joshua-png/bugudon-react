@@ -202,6 +202,6 @@ const getSectionAsObject = async( mdContentFile, jsonFileName) => {
     
 }
 
-getSectionAsObject('pagecontent/HomeCarouselTop/homeCarouselTop.md','homeCarouselTop.json' )
+getSectionAsObject('pagecontent/HomeCarousel/homeCarouselTop.md','homeCarouselTop.json' )
 // getPosts('posts.json', "../src/content");
 // getPages();
