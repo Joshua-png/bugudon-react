@@ -10,7 +10,15 @@ let postList = []
 let pageList =[]
 
 //get posts from the md files
-const getPosts = async () => {
+/**
+ * 
+ * @param {String} jsonFileName 
+ * The filename of the json file to place the content in relative to the current file
+ * @param {String} mdContent
+ * The location of the markdown files relative to the current file 
+ */
+const getPosts = async (jsonFileName, mdContent) => {
+    const dirPath = path.join(__dirname, mdContent?mdContent:"../src/content")
     //read files
     await fs.readdir(dirPath, (err, files) => {
         if (err) {
@@ -71,7 +79,7 @@ const getPosts = async () => {
                 //convert the array to json and store in a json file
                 if (i === files.length - 1) {
                     let data = JSON.stringify(postList)
-                    fs.writeFileSync('src/contentJSON/posts.json', data)
+                    fs.writeFileSync('src/contentJSON/'+ jsonFileName? jsonFileName:'error.json', data)
                 }
             })
         })
@@ -109,9 +117,7 @@ const getPages = async () => {
         })
     })
 
-
-
 }
 
-getPosts();
+getPosts('posts.json');
 getPages();
