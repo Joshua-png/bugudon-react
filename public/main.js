@@ -9,9 +9,9 @@ const dirPathPages = path.join(__dirname, "../src/pages/")
 let postList = []
 let pageList =[]
 
-//get posts from the md files
+//
 /**
- * 
+ * get posts from the md files with metadata and store in an object
  * @param {String} jsonFileName 
  * The filename of the json file to place the content in relative to the current file
  * @param {String} mdContent
@@ -44,7 +44,7 @@ const getPosts = async (jsonFileName, mdContent) => {
                     //get the text between the --- in the md files
                     let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
                     //Split based on the pair: value in the metadata, and assign the objects
-                    lines.forEach(line => {
+                    metadata.forEach(line => {
                         obj[line.split(': ')[0]] =line.split(': ')[1]
                     })
                     
@@ -82,18 +82,16 @@ const getPosts = async (jsonFileName, mdContent) => {
                 if (i === files.length - 1) {
                     let data = JSON.stringify(postList)
                     const path = 'src/contentJSON/' + (jsonFileName ? jsonFileName : 'error.json')
-                    console.log(postList);
                     fs.writeFileSync(path, data)
                 }
             })
         })
-    })
-    
-        
-    
+    })   
 }
 
-//get page
+/**
+ * Get page content alone, no metadata
+ */
 const getPages = async () => {
     //read files
     await fs.readdir(dirPathPages, (err, files) => {
@@ -124,5 +122,86 @@ const getPages = async () => {
 
 }
 
-getPosts('posts.json', "../src/content");
-getPages();
+/**
+ * get posts from the md files with metadata and store in a json object
+ * @param {String} mdContentFile
+ * The location of the markdown files relative to src/contentJSON folder
+ * * @param {String} jsonFileName
+ * The filename of the json file to place the content in relative to src folder
+ */
+const getSectionAsObject = async( mdContentFile, jsonFileName) => {
+    //get path to the md file's folder
+    const dirPath = path.join(__dirname, "../src/")
+    //read file
+            let post;
+            //read contents of the file
+    fs.readFile(`${dirPath}/${mdContentFile ? mdContentFile : "nofile.md"}`, 'utf8', (err, contents) => {
+        if (err) {
+            return console.log("File error "+ err);
+        }
+        
+        //get the index of --- in the md file, for the metadata positions
+        const getMetaDataIndices = (acc, elem, i) => {
+            if (/^---/.test(elem)) {
+                acc.push(i)
+            }
+            return acc;
+        }
+        //get the values between the --- as objects
+        const parseMetadata = (lines, metadataIndices) => {
+            let obj = {}
+            //get the text between the --- in the md files
+            let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+            //Split based on the pair: value in the metadata, and assign the objects
+            metadata.forEach(line => {
+                obj[line.split(': ')[0]] = line.split(': ')[1]
+            })
+            // console.log(obj);
+            return obj;
+        }
+        //get content alone, no metadata as a string
+        const parseContent = (lines, metadataIndices) => {
+            if (metadataIndices.length > 0) {
+                //return everything after second ---
+                lines = lines.slice(metadataIndices[1] + 1)
+
+                return lines.join('\n');
+            }
+            return lines.join('\n');
+        }
+        //split the contents of the files by lines
+        const lines = contents.split('\n');
+        //get indices of the metadata lines
+        const metadataIndices = lines.reduce(getMetaDataIndices, [])
+        //receive the metadata as an object, 
+        //check if there is metadata
+        if (metadataIndices.length) {
+            const metadata = parseMetadata(lines, metadataIndices)
+            const content = parseContent(lines, metadataIndices)
+            post = {
+                ...metadata,
+                content: content ? content : 'No content',
+            }
+            
+        }else{
+        //receive the content minus the metadata
+            const content = lines.join('\n');
+            post = {
+                content: content ? content : 'No content',
+            }
+        }
+        
+
+        //convert the post object to json and store in a json file
+        let data = JSON.stringify(post)
+        //path to store the JSON object    
+        const path = 'src/contentJSON/' + (jsonFileName ? jsonFileName : 'error.json')
+        fs.writeFileSync(path, data)
+    })
+        
+    
+}
+
+getSectionAsObject('pagecontent/HomeCarouselTop/homeCarouselTop.md','homeCarouselTop.json' )
+// getPosts('posts.json', "../src/content");
+// getPages();

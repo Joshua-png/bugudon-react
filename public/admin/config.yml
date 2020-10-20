@@ -17,10 +17,13 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "test" # Used in routes, e.g., /admin/collections/blog
-    label: "btest" # Used in the UI
-    folder: "src/pages" # The path to the folder where the documents are stored
+  - name: "Carousel" # Used in routes, e.g., /admin/collections/blog
+    label: "Homepage Carousel Top" # Used in the UI
+    folder: "src/pagecontent/HomeCarouselTop" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image 1", name: "image1", widget: "image"}
+      - {label: "Image 2", name: "image2", widget: "image"}
+      - {label: "Image 3", name: "image3", widget: "image"}
+      - {label: "Vision", name: "vision", widget: "string"}
