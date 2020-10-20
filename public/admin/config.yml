@@ -23,8 +23,8 @@ collections:
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Text", name: "test", widget: "string"}
-      - {label: "Image 1", name: "image1", widget: "image"}
-      - {label: "Image 2", name: "image2", widget: "image"}
-      - {label: "Image 3", name: "image3", widget: "image"}
-      - {label: "Vision", name: "vision", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
