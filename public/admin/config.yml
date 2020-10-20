@@ -26,5 +26,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Image One", name: "image1", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
