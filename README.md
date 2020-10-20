@@ -1,5 +1,5 @@
 # Project is live
-Bugudon(https://bugudon.netlify.app/)
+View site here -> [Bugudon](https://bugudon.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
