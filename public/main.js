@@ -150,13 +150,24 @@ const getSectionAsObject = async( mdContentFile, jsonFileName) => {
         //get the values between the --- as objects
         const parseMetadata = (lines, metadataIndices) => {
             let obj = {}
+            let lastIndexWithValidMeta = 0
             //get the text between the --- in the md files
             let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
             //Split based on the pair: value in the metadata, and assign the objects
-            metadata.forEach(line => {
+            metadata.forEach((line, i) => {
+                //remove line breaks and carriage returns
+                line = line.replace(/(\r\n|\n|\r)/gm, "")  
+                //check if line is valid metadata
+                if (i > 0 && !(/(\w+?:[ ])/.test(line))) {
+                    //assume line is a string and add to previous metadata value
+                    //also remove double space characters
+                    obj[metadata[lastIndexWithValidMeta].split(': ')[0]] += line.replace(/\s+/g, " ")
+                    return obj
+                }
+                lastIndexWithValidMeta =i
                 obj[line.split(': ')[0]] = line.split(': ')[1]
             })
-            // console.log(obj);
+            console.log(obj);
             return obj;
         }
         //get content alone, no metadata as a string
@@ -164,7 +175,6 @@ const getSectionAsObject = async( mdContentFile, jsonFileName) => {
             if (metadataIndices.length > 0) {
                 //return everything after second ---
                 lines = lines.slice(metadataIndices[1] + 1)
-
                 return lines.join('\n');
             }
             return lines.join('\n');
