@@ -1,5 +1,6 @@
 import React from 'react';
 import ReadMoreAndLess from 'react-read-more-less';
+import projects from '../../contentJSON/projects.json'
 
 
 export default function ProjectCards(){
@@ -7,7 +8,9 @@ export default function ProjectCards(){
         <div className="row pt-2 pb-3">
         <div className="col-md-4">
           <div className="shadow card bg-white mb-3 border-0 h-100" data-aos="fade-up">
-          <div className="card-header text-center text-white" style={{backgroundColor:'black'}}>Bugudon Gold Mine - Awaham Project</div>
+            <div className="card-header text-center text-white" style={{ backgroundColor: 'black' }}>
+              {projects[0].title}
+          </div>
           <div className="card-body zero-pt-pb pr-2 pl-2">
             <p className="card-text pro-body-content text-justify">The proposed Bugudon Gold Mine project will be on the firm’s 8.44Km2
               concession at Awaham in the West Akim Municipal Assembly of the Eastern
