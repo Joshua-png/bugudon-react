@@ -17,7 +17,7 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "Homepage" # Used in routes, e.g., /admin/collections/blog
+  - name: "HomepageCarousel" # Used in routes, e.g., /admin/collections/blog
     label: "Homepage Carousel Top" # Used in the UI
     folder: "src/pagecontent/HomeCarousel" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
@@ -28,3 +28,13 @@ collections:
       - {label: "Image Two", name: "image2", widget: "image", default: "ghana.png"}
       - {label: "Image Three", name: "image3", widget: "image", default: "ghana.png"}
       - {label: "Vision under images", name: "vision", widget: "string"}
+      
+  - name: "HomepageProjects" # Used in routes, e.g., /admin/collections/blog
+    label: "Homepage Projects section" # Used in the UI
+    folder: "src/pagecontent/HomeProjects" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Read More text", name: "readMoreText:", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

@@ -7,3 +7,4 @@
 [1018/171028.832:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\ARYEE JOSHUA\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\719fc726-0f98-49d9-8f8e-cecd69add9b8: The system cannot find the path specified. (0x3)
 
 [1021/112101.438:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1022/171410.222:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
