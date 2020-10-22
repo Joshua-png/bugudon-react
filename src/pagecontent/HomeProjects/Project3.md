@@ -1,12 +1,12 @@
 ---
 title: Wenof Gold Mine – Moseaso Project
-readMoreText: The above clearly signifies, Bugudon Limited associated project concept
-                    is in line with the firm’s mission of progressively harnessing best
-                    philosophies, practices, tools, partnerships, and resources to grow the
-                    company’s mining and process capability.
+readMoreText: The above clearly signifies, Bugudon Limited associated project
+  concept is in line with the firm’s mission of progressively harnessing best
+  philosophies, practices, tools, partnerships, and resources to grow the
+  company’s mining and process capability.
 ---
-The proposed <a href='mytest.com'>sometest</a>project will be on the firm’s 31.89Km2 concession at <mark className="bg-warning">Moseaso,
-Asankragwa</mark>, in the <mark class="bg-warning">Amenfi District Assembly</mark> of the Western Region of Ghana.
+The proposed project will be on the firm’s 31.89Km2 concession at <mark className="bg-warning">Moseaso,
+Asankragwa</mark>, in the <mark className="bg-warning">Amenfi District Assembly</mark> of the Western Region of Ghana.
 The Concession has an independent geological report by SEMS Exploration,
 Ghana a member of the West African Consultancy group. The report is in
 compliance of (‘‘JORC Code’’) and (‘‘ VALMIN Code’’). The report indicates
