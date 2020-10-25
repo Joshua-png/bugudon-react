@@ -1,8 +1,8 @@
 import React from 'react';
 import ReadMoreAndLess from 'react-read-more-less';
 import projects from '../../contentJSON/projects.json'
-// import ReactMarkdownWithHtml from "react-markdown/with-html";
-const ReactMarkdownWithHtml = require('react-markdown/with-html')
+import ReactMarkdownWithHtml from "react-markdown/with-html";
+// const ReactMarkdownWithHtml = require('react-markdown/with-html')
 
 
 export default function ProjectCards(){
@@ -15,7 +15,7 @@ export default function ProjectCards(){
           </div>
           <div className="card-body zero-pt-pb pr-2 pl-2">
               <p className="card-text pro-body-content text-justify">
-                <ReactMarkdownWithHtml children={projects[0].content} allowDangerousHtml={true} escapeHtml={false} />
+                <ReactMarkdownWithHtml children={projects[0].content} allowDangerousHtml />
             </p>
               <ReadMoreAndLess
                   charLimit={0}
@@ -32,7 +32,7 @@ export default function ProjectCards(){
             <div className="card-header text-center text-white" style={{ backgroundColor: 'black' }}>{projects[1].title}</div>
           <div className="card-body zero-pt-pb pr-2 pl-2">
               <p className="card-text pro-body-content text-justify">
-                <ReactMarkdownWithHtml children={projects[1].content} allowDangerousHtml={true} escapeHtml={false} />
+                <ReactMarkdownWithHtml children={projects[1].content} allowDangerousHtml />
            </p>
            <ReadMoreAndLess
                   charLimit={0}
@@ -52,7 +52,7 @@ export default function ProjectCards(){
           <div className="card-body zero-pt-pb pr-2 pl-2">
               <p className="card-text pro-body-content text-justify">
                 {console.log(projects[2].content)}
-                <ReactMarkdownWithHtml children={projects[2].content} allowDangerousHtml={true} escapeHtml={false}/>
+                <ReactMarkdownWithHtml children={projects[2].content} allowDangerousHtml/>
              </p>
              <ReadMoreAndLess
                   charLimit={0}

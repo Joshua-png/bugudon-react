@@ -19,7 +19,7 @@ const getMetaDataIndices = (acc, elem, i) => {
  * @param {*} lines 
  * @param {*} metadataIndices 
  */
-const parseContent = (lines, metadataIndices) => {
+const  parseContent = (lines, metadataIndices) => {
     if (metadataIndices.length > 0) {
         //return everything after second ---
         lines = lines.slice(metadataIndices[1] + 1)
@@ -59,7 +59,7 @@ const parseMetadata = (lines, metadataIndices) => {
  * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to the current file
  */
-const getPosts = (mdContentFolder, jsonFileName) => {
+const getPosts = async  (mdContentFolder, jsonFileName) => {
     let postList = []
     const dirPath = path.join(__dirname, mdContentFolder ? mdContentFolder : "../src/nofolder")
     //read files
@@ -113,7 +113,7 @@ const getPosts = (mdContentFolder, jsonFileName) => {
  * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to the current file
  */
-const getPages = (mdContentFolder, jsonFileName) => {
+const getPages = async  (mdContentFolder, jsonFileName) => {
     const dirPath = path.join(__dirname, mdContentFolder ? mdContentFolder : "../src/nofolder")
     let pageList = []
     //read files
@@ -158,7 +158,7 @@ const getPages = (mdContentFolder, jsonFileName) => {
  * * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to src folder
  */
-const getSectionAsObject = (mdContentFile, jsonFileName) => {
+const getSectionAsObject = async (mdContentFile, jsonFileName) => {
     //get path to the md file's folder
     const dirPath = path.join(__dirname, "../src/")
     //read file
@@ -206,7 +206,11 @@ const getSectionAsObject = (mdContentFile, jsonFileName) => {
 
 }
 
+//home -> carousel
 getSectionAsObject('pagecontent/HomeCarousel/homeCarouselTop.md', 'homeCarouselTop.json')
-getPosts("../src/pagecontent/homeProjects", 'projects.json');
+//home -> projects
+getPosts("../src / pagecontent / homeProjects", 'projects.json');
+//home -> investors
+getPosts("../src/pagecontent/homeInvestors", 'homeInvestors.json');
 
 // getPages('../src/pages', 'pages.json');
