@@ -59,7 +59,7 @@ const parseMetadata = (lines, metadataIndices) => {
  * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to the current file
  */
-const getPosts = async  (mdContentFolder, jsonFileName) => {
+const getPosts =   (mdContentFolder, jsonFileName) => {
     let postList = []
     const dirPath = path.join(__dirname, mdContentFolder ? mdContentFolder : "../src/nofolder")
     //read files
@@ -71,7 +71,6 @@ const getPosts = async  (mdContentFolder, jsonFileName) => {
             let post;
             //read contents of each file
             let contents = fs.readFileSync(`${dirPath}/${file}`, 'utf8')
-            console.log(contents);
             //split the contents of the files by lines
             const lines = contents.split('\n');
             //get indices of the metadata lines
@@ -89,6 +88,7 @@ const getPosts = async  (mdContentFolder, jsonFileName) => {
             //convert the array to json and store in a json file
             if (i === files.length - 1) {
                 let data = JSON.stringify(postList)
+                console.log(data);
                 const jsonFilePath = 'src/contentJSON/' + (jsonFileName ? jsonFileName : 'error.json')
                 fs.writeFileSync(jsonFilePath, data)
             }
@@ -113,7 +113,7 @@ const getPosts = async  (mdContentFolder, jsonFileName) => {
  * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to the current file
  */
-const getPages = async  (mdContentFolder, jsonFileName) => {
+const getPages =   (mdContentFolder, jsonFileName) => {
     const dirPath = path.join(__dirname, mdContentFolder ? mdContentFolder : "../src/nofolder")
     let pageList = []
     //read files
@@ -158,7 +158,7 @@ const getPages = async  (mdContentFolder, jsonFileName) => {
  * * @param {String} jsonFileName
  * The filename of the json file to place the content in relative to src folder
  */
-const getSectionAsObject = async (mdContentFile, jsonFileName) => {
+const getSectionAsObject =  (mdContentFile, jsonFileName) => {
     //get path to the md file's folder
     const dirPath = path.join(__dirname, "../src/")
     //read file
