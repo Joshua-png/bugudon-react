@@ -3,7 +3,7 @@ title: Investors
 helpText: This is also used in the investor page
 image: static/img/business-163464_1280.jpg
 ---
-On line with the company’s mission of progressively harnessing the best philosophies,
+In line with the company’s mission of progressively harnessing the best philosophies,
 practices, tools, partnerships, and resources to grow the company’s mining and process
 capability, the proponents of Bugudon Limited are seeking investors in the various projects
 that the company is promoting.
